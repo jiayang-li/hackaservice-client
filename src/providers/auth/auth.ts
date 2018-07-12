@@ -46,12 +46,11 @@ export class Auth {
       this.http.post(this.url + 'api/auth/login', JSON.stringify(credentials), {headers: headers})
         .subscribe(res => {
           let data = res.json();
-          console.log('uuuuuuuuuuuuh: ' + data);
           this.token = data.token;
           this.storage.set('token', data.token);
           this.storage.set('username', credentials.email);     
-          this.storage.set('role', credentials.role);     
-          this.storage.set('lang', data.lang);       
+          this.storage.set('role', data.user.role);     
+          this.storage.set('lang', data.user.lang);       
           resolve(data);
           resolve(res.json());
         }, (err) => {

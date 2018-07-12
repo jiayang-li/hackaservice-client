@@ -76,13 +76,15 @@ export class HomePage {
     this.getGeneralChart();
   }
   getGeneralChart() { 
-    let tweetObj = { number: this.generalQueueTotal2, lang: this.storage.get('lang')}
-    this.tweetService.getGoodTweets(this.generalQueueTotal2).then((data) => {
-      this.goodTweets = data;
-    }, (err) => { throw err; });
-    this.tweetService.getBadTweets(this.generalQueueTotal2).then((data) => {
-      this.badTweets = data;
-    }, (err) => { throw err; });
+    this.storage.get('lang').then((res) => {
+      let tweetObj = { number: this.generalQueueTotal2, lang: res.toString() }
+      this.tweetService.getGoodTweets(tweetObj).then((data) => {
+        this.goodTweets = data;
+      }, (err) => { throw err; });
+      this.tweetService.getBadTweets(tweetObj).then((data) => {
+        this.badTweets = data;
+      }, (err) => { throw err; });
+    });
   }
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 }

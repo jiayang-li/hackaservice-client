@@ -19,11 +19,12 @@ export class Tweets {
         });
     });
   }
-  getGoodTweets(numberOfTweets){
+  getGoodTweets(obj){
     return new Promise((resolve, reject) => {
       let headers = new Headers();
       headers.append('Authorization', this.authService.token);
-      this.http.get(this.url + 'api/tweets/good/' + numberOfTweets, {headers: headers})
+      console.log('durrrrr: ' + JSON.stringify(obj));
+      this.http.get(this.url + 'api/tweets/good/' + obj.lang + '/' + obj.number, {headers: headers})
         .map(res => res.json())
         .subscribe(data => {
           resolve(data);
@@ -32,11 +33,12 @@ export class Tweets {
         });
     });
   }
-  getBadTweets(numberOfTweets){
+  getBadTweets(obj){
     return new Promise((resolve, reject) => {
       let headers = new Headers();
       headers.append('Authorization', this.authService.token);
-      this.http.get(this.url + 'api/tweets/bad/' + numberOfTweets, {headers: headers})
+      console.log('durrrrr: ' + JSON.stringify(obj));
+      this.http.get(this.url + 'api/tweets/bad/' + obj.lang + '/' + obj.number, {headers: headers})
         .map(res => res.json())
         .subscribe(data => {
           resolve(data);
