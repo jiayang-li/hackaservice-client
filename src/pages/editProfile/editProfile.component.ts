@@ -4,7 +4,7 @@ import { Auth } from '../../providers/auth/auth';
 import { Loading } from 'ionic-angular/components/loading/loading';
 import { User } from '../../providers/user/user';
 import { Storage } from '@ionic/storage';
- 
+import { HomePage } from '../../pages/home/home'
 @Component({
   selector: 'edit-profile',
   templateUrl: 'editProfile.html'
@@ -39,7 +39,15 @@ export class EditProfilePage {
         lang: this.lang
       };
       this.userService.updateProfile(details).then((data) => { 
-        console.log('after: ' + data);
+        console.log('lake michigan: ' + data);
+        this.storage.remove('username');     
+        this.storage.remove('role');     
+        this.storage.remove('lang');     
+
+        this.storage.set('username', this.email);     
+        this.storage.set('role', this.role);     
+        this.storage.set('lang', this.lang);     
+        this.navCtrl.setRoot(HomePage);
       }); 
   }
 }

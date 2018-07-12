@@ -77,7 +77,8 @@ export class HomePage {
   }
   getGeneralChart() { 
     this.storage.get('lang').then((res) => {
-      let tweetObj = { number: this.generalQueueTotal2, lang: 'en' }
+      console.log('toledo: ' + res);
+      let tweetObj = { number: this.generalQueueTotal2, lang: res.toString() }
       this.tweetService.getGoodTweets(tweetObj).then((data) => {
         this.goodTweets = data;
       }, (err) => { throw err; });

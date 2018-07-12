@@ -64,9 +64,9 @@ export class claimTweetForm {
         headers.append('Authorization', this.authService.token);
         let tweetObj = { user: this.tweetUser, text: this.text, in_reply_to: this.in_reply_to };
         // uncomment this to actually post tweet
-        // this.http.post('https://hackaservice.herokuapp.com/api/tweets/postTweet/', 
-        // JSON.stringify(tweetObj), { headers: headers })
-        //     .subscribe(res => { this.claimedSuccessfully(res); });
+        this.http.post('https://hackaservice.herokuapp.com/api/tweets/postTweet/', 
+        JSON.stringify(tweetObj), { headers: headers })
+            .subscribe(res => { this.claimedSuccessfully(res); });
         this.claimedSuccessfully(tweetObj); 
         this.viewCtrl.dismiss();
     }
