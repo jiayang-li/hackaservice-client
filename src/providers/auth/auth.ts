@@ -49,13 +49,16 @@ export class Auth {
           this.token = data.token;
           this.storage.set('token', data.token);
           this.storage.set('username', credentials.email);     
-          this.storage.set('role', data.user.role);     
-          this.storage.set('lang', data.user.lang);       
+          this.storage.set('role', credentials.role);            
           resolve(data);
           resolve(res.json());
         }, (err) => {
           reject(err);
         });
     });
+  }
+  logout(){
+    this.storage.set('token', '');
+    this.storage.set('username', '');
   }
 }
