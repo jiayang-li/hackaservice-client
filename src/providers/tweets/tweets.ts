@@ -23,7 +23,6 @@ export class Tweets {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
       headers.append('Authorization', this.authService.token);
-      console.log('durrrrr: ' + JSON.stringify(obj));
       this.http.get(this.url + 'api/tweets/good/' + obj.lang + '/' + obj.number, {headers: headers})
         .map(res => res.json())
         .subscribe(data => {
@@ -37,7 +36,6 @@ export class Tweets {
     return new Promise((resolve, reject) => {
       let headers = new Headers();
       headers.append('Authorization', this.authService.token);
-      console.log('durrrrr: ' + JSON.stringify(obj));
       this.http.get(this.url + 'api/tweets/bad/' + obj.lang + '/' + obj.number, {headers: headers})
         .map(res => res.json())
         .subscribe(data => {

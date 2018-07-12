@@ -33,7 +33,7 @@ export class SignupPage {
         role: this.role,
         lang: this.lang
     };
- 
+    console.log('stringy: ' + JSON.stringify(details));
     this.authService.createAccount(details).then((result) => {
       this.loading.dismiss();
       console.log(result);
