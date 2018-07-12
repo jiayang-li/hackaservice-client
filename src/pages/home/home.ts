@@ -65,10 +65,6 @@ export class HomePage {
     });
     this.loading.present();
   }
-  logout(){
-    this.authService.logout();
-    this.navCtrl.setRoot(LoginPage);
-  }
   refineDate(timestamp) { 
     timestamp = new Date(timestamp);
     let date = timestamp.getMonth()+1 + '/' + timestamp.getDate()+ '/' + timestamp.getFullYear() + ' @ ' + timestamp.getHours() + ':' +  timestamp.getMinutes()
