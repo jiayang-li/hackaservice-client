@@ -2,6 +2,11 @@
     background: #282829 !important;
     color: #FFF;
 }
+
+#menuButton > button > span{
+    background: #666666 !important;
+}
+
 .toolbar-title, 
 .toolbar-title a,
 .bar-button-default-md, 
@@ -56,6 +61,11 @@
     background-color: #337ab7;
     border-color: #337ab7;
 }
+
+@media only screen and (min-width: 800px) {
+    .brandingText{ margin-left: 65px !important;}
+}
+
 @media (min-width: 600px) {
     #menuButton { 
         float: right;

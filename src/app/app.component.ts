@@ -32,7 +32,7 @@ export class MyApp {
           link: 'goToAbout()'
         },
         { 
-          tabTitle : 'SignUp',
+          tabTitle : 'Sign Up',
           Component: SignupPage,
           link: 'goToContact()'
         }, 

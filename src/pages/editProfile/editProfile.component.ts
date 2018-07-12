@@ -39,7 +39,6 @@ export class EditProfilePage {
         lang: this.lang
       };
       this.userService.updateProfile(details).then((data) => { 
-        console.log('lake michigan: ' + data);
         this.storage.remove('username');     
         this.storage.remove('role');     
         this.storage.remove('lang');     
