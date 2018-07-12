@@ -6,7 +6,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
 import { EditProfilePage } from '../pages/editProfile/editProfile.component';
-
+import { Storage } from '@ionic/storage';
 @Component({
   templateUrl: `app.html`
 })
@@ -14,7 +14,7 @@ export class MyApp {
   @ViewChild(Nav) nav: NavController;  
   rootPage = LoginPage;
   public mainmenu : any = [];
-  constructor(platform: Platform, statusBar: StatusBar) {
+  constructor(public storage : Storage, platform: Platform, statusBar: StatusBar) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -59,5 +59,11 @@ export class MyApp {
   }
   goToEditProfile(Page) { 
     this.nav.setRoot(EditProfilePage);
+  }
+  logout() { 
+    // sets username and token to null
+    this.storage.set("username", "");
+    this.storage.set("token", "");
+    this.nav.setRoot(LoginPage); // takes user to LoginPage
   }
 }

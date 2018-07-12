@@ -57,8 +57,4 @@ export class Auth {
         });
     });
   }
-  logout(){
-    this.storage.set('token', '');
-    this.storage.set('username', '');
-  }
 }

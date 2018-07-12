@@ -3,6 +3,9 @@
         <button menuClose ion-item *ngFor="let m of mainmenu" (click)="openPage(m)">
                 {{m.tabTitle}}
         </button>
+        <button (click)="logout()">
+            Logout
+          </button>
     </ion-content>
 </ion-menu>
 <ion-nav [root]="rootPage" #nav main name="app"></ion-nav>
