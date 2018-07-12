@@ -3,7 +3,7 @@
         <button menuClose ion-item *ngFor="let m of mainmenu" (click)="openPage(m)">
                 {{m.tabTitle}}
         </button>
-        <button (click)="logout()">
+        <button menuClose ion-item (click)="logout()">
             Logout
           </button>
     </ion-content>
