@@ -11,6 +11,7 @@ import { Loading } from 'ionic-angular/components/loading/loading';
 export class SignupPage {
   loading: Loading;
   role: string;
+  lang: string;
   email: string;
   password: string;
  
@@ -25,7 +26,8 @@ export class SignupPage {
     let details = {
         email: this.email,
         password: this.password,
-        role: this.role
+        role: this.role,
+        lang: this.lang
     };
  
     this.authService.createAccount(details).then((result) => {
