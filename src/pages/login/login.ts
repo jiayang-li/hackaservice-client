@@ -36,7 +36,7 @@ export class LoginPage {
         };
         this.authService.login(credentials).then((result) => {
             this.loading.dismiss();
-            console.log('reeeeezult: ' + result);
+            console.log('reeeeezult: ' + JSON.stringify(result));
             this.navCtrl.setRoot(HomePage);
         }, (err) => {
             this.loading.dismiss();

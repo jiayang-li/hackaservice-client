@@ -24,11 +24,11 @@ export class User {
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
       headers.append('Authorization', this.authService.token);
+      console.log("what the fuck" + JSON.stringify(user));
       this.http.put(
         this.url + 'api/profile/updateProfile', 
         { user: user }, 
         {headers: headers})
-        .map(res => res.json())
         .subscribe(data => {
           console.log(data);
           resolve(data);
