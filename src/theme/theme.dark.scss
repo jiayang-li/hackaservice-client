@@ -1,0 +1,36 @@
+.dark-theme {
+    ion-content {
+      background-color: #131313;
+      color: #fff;
+    }
+    ion-content h1, 
+    ion-content h2, 
+    ion-content h3, 
+    ion-content h4, 
+    ion-content h5, 
+    ion-content h6 { 
+        color: #FFF;
+    }
+    .button-md-transparent { 
+        // color: #131313;
+    }
+    .menu-inner, .md, .item-md { 
+        background: #131313 !important;
+        color: #FFF !important;
+    }
+    .brandingText { 
+        // color: #131313;
+    }
+    .ups-top-navigation { 
+        // background: #FFF !important;
+        // color: #131313 !important;
+    }
+    .headerInsetBg {
+        // border-right: 5px solid #EEE !important;
+        // background: #DDD !important;
+    }
+    .tabs-md .tabbar { background: #282829 !important; }
+    .tabs-md .tab-button { color: #FFF !important; }
+    .tabs-md .tab-button-icon { color: #FFF; }
+    hr { background: #555 !important; }
+}  

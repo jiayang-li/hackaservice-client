@@ -1,0 +1,237 @@
+/* Standard Theme Prototype by Chris Bonilla - CDS/Mobility */
+/* Theme Styles go here */
+
+    .header,
+	.footer,
+	.box {
+        background-color: #282829;
+        color: #FFFFFF;
+    }
+
+    .wrapper,
+	.spacer-head,
+	.spacer-foot {
+        background-color: #FFF;
+        color: #444;
+    }
+	
+	/* This defines the defaults for every screen. Notice that font is 14px, therefore 14px = 1em*/ 
+	body {
+		font-family: "Segoe UI";
+		font-size: 14px;
+		line-height: 16px;
+		background-color: #FAFAFB;
+	}
+	
+	html, body {
+	  overflow-x: hidden;
+	}
+	
+	/* Largest header intended for page names 32px */ 
+	h1 {
+		font-size: 2.286ems;
+		color: #212121;
+		padding: 0;
+		margin: 0;
+	}
+	
+	/* Large header intended for Category names 24px*/
+	h2 {
+		font-size: 1.7ems;
+		color: #212121;
+		padding: 0;
+		margin: 0;
+	}
+	
+	/* Background helps to act as a separator 18px*/
+	h3 {
+		font-family: "SegoeUI-SemiBold";
+		font-size: 1.285ems;
+		color: #212121;
+		text-transform: uppercase;
+		vertical-align: center;
+		padding: 0, 8px;
+		height: 36px;
+		background: #E4E4E4;
+	}
+	
+	/* unvisited link */
+	a:link {
+		color: green;
+	}
+
+	/* visited link */
+	a:visited {
+		color: green;
+	}
+
+	/* mouse over link */
+	a:hover {
+		color: red;
+	}
+
+	/* selected link */
+	a:active {
+		color: yellow;
+	}
+	
+	li > div {
+	
+	}
+	
+	/** COLORS & THEMES **/
+	
+	.bg-light-1 {
+		background-color: #FFFFFF;
+		color: #000000;
+	}
+	
+	.bg-light-2 {
+		background-color: #FAFAFB;
+		color: #000000;
+	}
+	
+	.bg-light-3 {
+		background-color: #F2F2F2;
+		color: #000000;
+	}
+	
+	.bg-light-4 {
+		background-color: #E4E4E4;
+		color: #000000;
+	}
+	
+	.bg-light-5 {
+		background-color: #CCCCCC;
+		color: #000000;
+	}
+	
+	.bg-dark-1 {
+		background-color: #AEAEAE;
+		color: #FFFFFF;
+	}
+	
+	.bg-dark-2 {
+		background-color: #878788;
+		color: #FFFFFF;
+	}
+	
+	.bg-dark-3 {
+		background-color: #565657;
+		color: #FFFFFF;
+	}
+	
+	.bg-dark-4 {
+		background-color: #282829;
+		color: #FFFFFF;
+	}
+	
+	.bg-dark-5 {
+		background-color: #212121;
+		color: #FFFFFF;
+	}
+	
+	.bg-color-info {
+		background-color: #3366CC;
+		color: #FFFFFF;
+	}
+	
+	.bg-color-success,
+	.bg-color-approval	{
+		background-color: #339900;
+		color: #FFFFFF;
+	}
+	
+	.bg-color-warning {
+		background-color: #FFB500;
+		color: #FFFFFF;
+	}
+	
+	.bg-color-alert,
+	.bg-color-deny	{
+		background-color: #CC0000;
+		color: #FFFFFF;
+	}
+	
+	.bg-color-primary {
+		background-color: #2196F3;
+		color: #FFFFFF;
+	}
+
+	.bg-tint-info {
+		background-color: #C4D6ED;
+		color: #000000;
+	}
+	
+	.bg-tint-success,
+	.bg-tint-approve {
+		background-color: #C9E3BD;
+		color: #000000;
+	}
+	
+	.bg-tint-warning {
+		background-color: #FBE9BD;
+		color: #000000;
+	}
+	
+	.bg-tint-alert,
+	.bg-tint-deny	{
+		background-color: #EEBCBD;
+		color: #000000;
+	}
+
+	.btn-menu {
+		background-color: #FAFAFB;
+		color: #000000;
+	}
+	
+	.btn-menu-active {
+		background-color: #000000;
+		color: #FAFAFB;
+	}
+	
+	.btn {
+		height: 48px;
+		box-shadow: 0px 1px 2px 0 rgba(0,0,0,0.50);
+		border-radius: 4px;
+		font-family: SegoeUI;
+		font-size: 20px;
+		padding: 0px 16px; 
+	}
+	
+	.btn-primary,
+	.btn-download {
+		background: #2196f3;
+		color: #FFFFFF;
+
+	}
+	
+	.btn-secondary {
+		background: #FFFFFF;
+		color: #2196f3;
+		border: 1px solid #C8C8C9;
+	}
+	
+	.btn-disabled,
+	.btn-inactive {
+		background: #CCCCCC;
+		color: #565657; 
+	}
+	
+	.btn-positive,
+	.btn-approve,
+	.btn-accept {
+		background: #339900;
+		color: #FFFFFF;
+	}
+	
+	.btn-negative,
+	.btn-reject,
+	.btn-deny,
+	.btn-delete {
+		background: #3366CC;
+		color: #FFFFFF;
+				
+	}
+	
+	

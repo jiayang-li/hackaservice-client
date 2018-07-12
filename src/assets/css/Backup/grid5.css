@@ -1,0 +1,53 @@
+/* Styles go here */
+
+body {
+  margin: 40px;
+}
+
+	.upsshield {
+        grid-area: upsshield;
+    }
+
+	.sidebar {
+        grid-area: sidebar;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+
+    .wrapper {
+        display: grid;
+		grid-gap: 10px;
+        grid-template-columns: 120px 120px 120px;
+        grid-template-areas:
+		"upsshield header  header"
+        "sidebar   content content"
+        "footer    footer  footer";
+        background-color: #fff;
+        color: #444;
+    }
+
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%;
+}
+
+.ups,
+.header,
+.footer {
+  background-color: #999;
+}

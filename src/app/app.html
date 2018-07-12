@@ -1,0 +1,8 @@
+<ion-menu [content]="nav">
+    <ion-content padding>
+        <button menuClose ion-item *ngFor="let m of mainmenu" (click)="openPage(m)">
+                {{m.tabTitle}}
+        </button>
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #nav main name="app"></ion-nav>

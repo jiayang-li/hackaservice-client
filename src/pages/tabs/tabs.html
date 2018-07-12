@@ -1,0 +1,6 @@
+<ion-tabs #myTabs [selectedIndex]="indexer">
+    <ion-tab [root]="LoginPageRoot" tabTitle="Login" tabIcon="home" ></ion-tab>
+  <ion-tab [root]="HomePageRoot" tabTitle="Home" tabIcon="home" [tabBadge]="notif()" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="StylingPageRoot" tabTitle="Styling" tabIcon="logo-buffer"></ion-tab>
+  <ion-tab [root]="IconsPageRoot" tabTitle="Icons" tabIcon="apps"></ion-tab>
+</ion-tabs>  

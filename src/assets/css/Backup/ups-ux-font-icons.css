@@ -1,0 +1,586 @@
+@charset "UTF-8";
+
+[data-icon]:before {
+  font-family: "ups-ux-font" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ups-icon-"]:before,
+[class*=" ups-icon-"]:before {
+  font-family: "ups-ux-font" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ups-icon-ban:before {
+  content: "\61";
+}
+.ups-icon-addtask:before {
+  content: "\63";
+}
+.ups-icon-terminal:before {
+  content: "\64";
+}
+.ups-icon-parking:before {
+  content: "\65";
+}
+.ups-icon-beltloader:before {
+  content: "\66";
+}
+.ups-icon-uld-left:before {
+  content: "\67";
+}
+.ups-icon-uld-right:before {
+  content: "\68";
+}
+.ups-icon-dolly-left:before {
+  content: "\69";
+}
+.ups-icon-dolly-right:before {
+  content: "\6a";
+}
+.ups-icon-kloader:before {
+  content: "\6b";
+}
+.ups-icon-tug-left:before {
+  content: "\6c";
+}
+.ups-icon-tug-right:before {
+  content: "\6d";
+}
+.ups-icon-dashboard:before {
+  content: "\6e";
+}
+.ups-icon-truck:before {
+  content: "\6f";
+}
+.ups-icon-people:before {
+  content: "\70";
+}
+.ups-icon-clipboard:before {
+  content: "\71";
+}
+.ups-icon-employee-0-1:before {
+  content: "\72";
+}
+.ups-icon-crewmember:before {
+  content: "\73";
+}
+.ups-icon-crewvan:before {
+  content: "\74";
+}
+.ups-icon-hanger:before {
+  content: "\75";
+}
+.ups-icon-ramp1:before {
+  content: "\76";
+}
+.ups-icon-split-task:before {
+  content: "\77";
+}
+.ups-icon-ups-shield:before {
+  content: "\78";
+}
+.ups-icon-diad:before {
+  content: "\79";
+}
+.ups-icon-ramp2:before {
+  content: "\7a";
+}
+.ups-icon-ramp3:before {
+  content: "\41";
+}
+.ups-icon-ramp4:before {
+  content: "\42";
+}
+.ups-icon-ramp5:before {
+  content: "\43";
+}
+.ups-icon-ramp6:before {
+  content: "\44";
+}
+.ups-icon-ramp7:before {
+  content: "\45";
+}
+.ups-icon-ramp9:before {
+  content: "\46";
+}
+.ups-icon-ramp11:before {
+  content: "\47";
+}
+.ups-icon-worldport:before {
+  content: "\48";
+}
+.ups-icon-winga:before {
+  content: "\49";
+}
+.ups-icon-wingb:before {
+  content: "\4a";
+}
+.ups-icon-wingc:before {
+  content: "\4b";
+}
+.ups-icon-wingd:before {
+  content: "\4c";
+}
+.ups-icon-winge:before {
+  content: "\4d";
+}
+.ups-icon-wingh:before {
+  content: "\4e";
+}
+.ups-icon-employee-1-1:before {
+  content: "\4f";
+}
+.ups-icon-employee-0-2:before {
+  content: "\50";
+}
+.ups-icon-employee-1-2:before {
+  content: "\51";
+}
+.ups-icon-employee-2-2:before {
+  content: "\52";
+}
+.ups-icon-employee-0-3:before {
+  content: "\53";
+}
+.ups-icon-employee-1-3:before {
+  content: "\54";
+}
+.ups-icon-employee-2-3:before {
+  content: "\55";
+}
+.ups-icon-employee-3-3:before {
+  content: "\56";
+}
+.ups-icon-employee-0-4:before {
+  content: "\57";
+}
+.ups-icon-employee-1-4:before {
+  content: "\58";
+}
+.ups-icon-employee-2-4:before {
+  content: "\59";
+}
+.ups-icon-employee-3-4:before {
+  content: "\5a";
+}
+.ups-icon-employee-4-4:before {
+  content: "\30";
+}
+.ups-icon-trailer-short-drop:before {
+  content: "\33";
+}
+.ups-icon-trailer-long-air4:before {
+  content: "\34";
+}
+.ups-icon-package-car:before {
+  content: "\36";
+}
+.ups-icon-trailer-short-air2:before {
+  content: "\37";
+}
+.ups-icon-trailer-short:before {
+  content: "\38";
+}
+.ups-icon-scan-barcode:before {
+  content: "\39";
+}
+.ups-icon-dismiss:before {
+  content: "\21";
+}
+.ups-icon-sign-out:before {
+  content: "\22";
+}
+.ups-icon-feedback-down:before {
+  content: "\23";
+}
+.ups-icon-feedback-up:before {
+  content: "\24";
+}
+.ups-icon-observe:before {
+  content: "\25";
+}
+.ups-icon-reminder:before {
+  content: "\26";
+}
+.ups-icon-restart:before {
+  content: "\27";
+}
+.ups-icon-yard-vest:before {
+  content: "\28";
+}
+.ups-icon-snooze:before {
+  content: "\29";
+}
+.ups-icon-downvote:before {
+  content: "\2a";
+}
+.ups-icon-upvote:before {
+  content: "\2b";
+}
+.ups-icon-activity-none:before {
+  content: "\2c";
+}
+.ups-icon-activity-yes:before {
+  content: "\2d";
+}
+.ups-icon-activity-add:before {
+  content: "\2e";
+}
+.ups-icon-employee-add:before {
+  content: "\2f";
+}
+.ups-icon-punch-add:before {
+  content: "\3a";
+}
+.ups-icon-break:before {
+  content: "\3b";
+}
+.ups-icon-circle-check:before {
+  content: "\3c";
+}
+.ups-icon-alert:before {
+  content: "\3d";
+}
+.ups-icon-comments:before {
+  content: "\3e";
+}
+.ups-icon-finish-check:before {
+  content: "\3f";
+}
+.ups-icon-finish-o:before {
+  content: "\40";
+}
+.ups-icon-finish:before {
+  content: "\5b";
+}
+.ups-icon-employee-record:before {
+  content: "\5d";
+}
+.ups-icon-circle-times:before {
+  content: "\5e";
+}
+.ups-icon-rescue:before {
+  content: "\5f";
+}
+.ups-icon-timer:before {
+  content: "\60";
+}
+.ups-icon-employee-request:before {
+  content: "\7b";
+}
+.ups-icon-emloyee-send:before {
+  content: "\7c";
+}
+.ups-icon-crewmember-asc:before {
+  content: "\7d";
+}
+.ups-icon-align-down:before {
+  content: "\7e";
+}
+.ups-icon-align-left:before {
+  content: "\5c";
+}
+.ups-icon-align-right:before {
+  content: "\e000";
+}
+.ups-icon-align-up:before {
+  content: "\e001";
+}
+.ups-icon-seal-capture:before {
+  content: "\e002";
+}
+.ups-icon-doors:before {
+  content: "\e003";
+}
+.ups-icon-move:before {
+  content: "\e004";
+}
+.ups-icon-unlink:before {
+  content: "\e005";
+}
+.ups-icon-trailer:before {
+  content: "\e006";
+}
+.ups-icon-request-5min:before {
+  content: "\e007";
+}
+.ups-icon-request-pallets:before {
+  content: "\e008";
+}
+.ups-icon-request-pull:before {
+  content: "\e009";
+}
+.ups-icon-request:before {
+  content: "\e00a";
+}
+.ups-icon-request-pull-replace:before {
+  content: "\e00b";
+}
+.ups-icon-fwha:before {
+  content: "\e00c";
+}
+.ups-icon-problem-flap:before {
+  content: "\e00d";
+}
+.ups-icon-problem-hole:before {
+  content: "\e00e";
+}
+.ups-icon-problem-missing-roller:before {
+  content: "\e00f";
+}
+.ups-icon-problem-wrong-number:before {
+  content: "\e010";
+}
+.ups-icon-problem-trash:before {
+  content: "\e011";
+}
+.ups-icon-problem-type:before {
+  content: "\e012";
+}
+.ups-icon-problem-general:before {
+  content: "\e013";
+}
+.ups-icon-cancel-load:before {
+  content: "\e014";
+}
+.ups-icon-load-aufit:before {
+  content: "\e015";
+}
+.ups-icon-verified:before {
+  content: "\e016";
+}
+.ups-icon-canada:before {
+  content: "\e017";
+}
+.ups-icon-mexico:before {
+  content: "\e018";
+}
+.ups-icon-usa:before {
+  content: "\e019";
+}
+.ups-icon-trailer-empty:before {
+  content: "\e01a";
+}
+.ups-icon-calendar:before {
+  content: "\e01b";
+}
+.ups-icon-trailer-checked:before {
+  content: "\e01c";
+}
+.ups-icon-trailer-verified:before {
+  content: "\e01d";
+}
+.ups-icon-calendar-remove:before {
+  content: "\e01e";
+}
+.ups-icon-link:before {
+  content: "\e01f";
+}
+.ups-icon-comment:before {
+  content: "\e020";
+}
+.ups-icon-package:before {
+  content: "\e021";
+}
+.ups-icon-multi-load:before {
+  content: "\e022";
+}
+.ups-icon-tag:before {
+  content: "\e023";
+}
+.ups-icon-comment-issue:before {
+  content: "\e024";
+}
+.ups-icon-request-spot:before {
+  content: "\e025";
+}
+.ups-icon-svc1:before {
+  content: "\e026";
+}
+.ups-icon-svc2:before {
+  content: "\e027";
+}
+.ups-icon-svc3:before {
+  content: "\e028";
+}
+.ups-icon-comment-trailer:before {
+  content: "\e029";
+}
+.ups-icon-link-break:before {
+  content: "\e02a";
+}
+.ups-icon-alert-1:before {
+  content: "\e02b";
+}
+.ups-icon-arrow-left:before {
+  content: "\e02c";
+}
+.ups-icon-arrow-right:before {
+  content: "\e02d";
+}
+.ups-icon-arrow-up:before {
+  content: "\e02e";
+}
+.ups-icon-attachment:before {
+  content: "\e02f";
+}
+.ups-icon-chart:before {
+  content: "\e030";
+}
+.ups-icon-calendar-1:before {
+  content: "\e031";
+}
+.ups-icon-camera:before {
+  content: "\e032";
+}
+.ups-icon-picture-gallery:before {
+  content: "\e033";
+}
+.ups-icon-caret-down:before {
+  content: "\e034";
+}
+.ups-icon-caret-right:before {
+  content: "\e035";
+}
+.ups-icon-check:before {
+  content: "\e036";
+}
+.ups-icon-square-o:before {
+  content: "\e037";
+}
+.ups-icon-square-x:before {
+  content: "\e038";
+}
+.ups-icon-square-check:before {
+  content: "\e039";
+}
+.ups-icon-copy:before {
+  content: "\e03a";
+}
+.ups-icon-trash:before {
+  content: "\e03b";
+}
+.ups-icon-drag-handle:before {
+  content: "\e03c";
+}
+.ups-icon-document:before {
+  content: "\e03d";
+}
+.ups-icon-filter:before {
+  content: "\e03e";
+}
+.ups-icon-menu:before {
+  content: "\e03f";
+}
+.ups-icon-refresh:before {
+  content: "\e040";
+}
+.ups-icon-list:before {
+  content: "\e041";
+}
+.ups-icon-lock:before {
+  content: "\e042";
+}
+.ups-icon-microphone:before {
+  content: "\e043";
+}
+.ups-icon-circle-minus:before {
+  content: "\e044";
+}
+.ups-icon-elipsis:before {
+  content: "\e045";
+}
+.ups-icon-chevron-right:before {
+  content: "\e046";
+}
+.ups-icon-times:before {
+  content: "\e047";
+}
+.ups-icon-circle-add:before {
+  content: "\e048";
+}
+.ups-icon-add:before {
+  content: "\e049";
+}
+.ups-icon-chevron-left:before {
+  content: "\e04a";
+}
+.ups-icon-circle-check-1:before {
+  content: "\e04b";
+}
+.ups-icon-circle:before {
+  content: "\e04c";
+}
+.ups-icon-circle-half:before {
+  content: "\e04d";
+}
+.ups-icon-restart-1:before {
+  content: "\e04e";
+}
+.ups-icon-find:before {
+  content: "\e04f";
+}
+.ups-icon-cog:before {
+  content: "\e050";
+}
+.ups-icon-sliders:before {
+  content: "\e051";
+}
+.ups-icon-decending:before {
+  content: "\e052";
+}
+.ups-icon-ascending:before {
+  content: "\e053";
+}
+.ups-icon-change-slic:before {
+  content: "\e054";
+}
+.ups-icon-clock:before {
+  content: "\e055";
+}
+.ups-icon-upsicons:before {
+  content: "\62";
+}
+.ups-icon-train:before {
+  content: "\e056";
+}
+.ups-icon-tractor-single:before {
+  content: "\e057";
+}
+.ups-icon-tractor-double:before {
+  content: "\e058";
+}
+.ups-icon-long:before {
+  content: "\e059";
+}
+.ups-icon-dolly:before {
+  content: "\e05a";
+}
+.ups-icon-chassis-short:before {
+  content: "\e05b";
+}
+.ups-icon-chassis-long:before {
+  content: "\e05c";
+}
+.ups-icon-chassis-container:before {
+  content: "\e05d";
+}
+.ups-icon-upsicons-1:before {
+  content: "\31";
+}

@@ -1,0 +1,134 @@
+.toolbar-background { 
+    background: #282829 !important;
+    color: #FFF;
+}
+.toolbar-title, 
+.toolbar-title a,
+.bar-button-default-md, 
+.bar-button-clear-md-default, 
+.bar-button-md-default
+.bar-button-default { 
+    color: #FFF;
+}
+#menuButton { 
+    display: inline-block !important;
+    position: relative;
+    top: 10px;
+    left: -10px;
+}
+.ups-box div {
+    padding: 14px;
+}
+#flexer div { 
+    padding: 0px !important;
+}
+.ups-box button {
+    padding: 7px;
+}
+#titleColor {
+     color: #000;
+}
+#branding { 
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    left: -16px;
+}
+#researchContain { 
+    background: white;
+}
+.panel-heading, .panel-body {
+    padding: 16px;
+}
+.panel { 
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.panel-primary {
+    border-color: #337ab7;
+}
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+@media (min-width: 600px) {
+    #menuButton { 
+        float: right;
+    }
+    #branding { 
+        position: relative;
+        top: 9px;
+        left: 8px;
+    }
+    /* .tabbar.show-tabbar { 
+        display: none;
+    } */
+    .noShowOnDesktop { display: none !important; }
+    ion-menu .scroll-content {
+        margin-top: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .ups-top-navigation .headerInset { 
+        border: 0px !important;
+    }
+    .navbar-brand { 
+        display:none;
+    }
+    .noShowOnMobile { display: none !important; }
+    #menuButton {
+        display: inline-block !important;
+        position: relative;
+        top: -29px;
+        left: -54px;
+    }
+    .brandingText { top : -24px !important; left: -60px !important; }
+}
+
+
+.ups_logo { 
+    transform: skew(5deg);
+}
+.ups-top-navigation .headerInset { 
+    margin-top: 2px;
+    height:50px;
+}
+.navbar-fixed-top { 
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-repeat: repeat-x;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+    min-height: 50px;
+    margin-top: -3px;
+    border: 1px solid transparent;
+} 
+.insetContainer { 
+    margin-top: 7px;
+    margin-left: 8px;
+}
+.ups-top-navigation { 
+    display: flex;
+}
+.ups-top-navigation .leftHead { 
+    order: 0;
+    flex-grow: 3;
+    flex-shrink: 3;
+    flex-basis: 0;
+}
+
+.scroll-content { 
+    margin-top: 50px;
+}
+
+ion-content { 
+    margin-top: 25px;
+}

@@ -1,0 +1,117 @@
+/* Standard Grid Layout Prototype by Chris Bonilla - CDS/Mobility */
+/* Grid Layout Styles go here */
+
+	.wrapper {
+        display: grid;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+        grid-template-columns: minmax(120px,12%) 5px 1fr 1fr;
+		grid-template-rows: minmax(80px,120px) auto;
+        grid-template-areas:
+		"upsshield          spacer-v-tilt      header             header"
+		"spacer-h-accent    spacer-h-accent    spacer-h-accent    spacer-h-accent"
+		"spacer-head        spacer-head        spacer-head        spacer-head"
+		"sidebar            ........           content            content"
+		"spacer-foot        spacer-foot        spacer-foot        spacer-foot"
+		"spacer-f-accent    spacer-f-accent    spacer-f-accent    spacer-f-accent"
+		"footer             footer             footer             footer";
+    }
+
+
+	.box {
+	  /*border-radius: 5px;*/
+	  padding: 3px;
+	  /*font-size: 150%;*/
+	}
+
+	.nogrid {
+		padding: 10px;
+	}
+	
+	@supports (display:grid) {
+		.nogrid {
+			display: none;
+		}
+	}
+
+	.upsshield {
+        grid-area: upsshield;
+		padding-top: 5px;
+	}
+	
+	.shieldcontainer {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;
+	}
+	
+	.shieldcontainer > .shieldimage {
+		max-width:75%;
+		vertical-align: middle;
+    }
+	
+	.sidebar {
+        grid-area: sidebar;
+    }
+	
+    .content {
+        grid-area: content;
+    }
+
+    .header {
+        grid-area: header;
+		padding-left: 15px;	
+	}
+	
+    .footer {
+        grid-area: footer;
+		position:fixed;
+		height:5%;
+		max-height:20px;
+		width:100%;
+		bottom:0px;
+    }
+	
+	.spacer-v {
+        grid-area: spacer-v;
+		width: 3px;
+    }
+	
+	.spacer-v-tilt {
+        grid-area: spacer-v-tilt;
+		width: 25px;
+		margin-left: -10px;
+		height: 100%;
+	-webkit-transform: skew(-7deg);
+	   -moz-transform: skew(-7deg);
+	     -o-transform: skew(-7deg);
+    }
+
+	.spacer-v-accent {
+        grid-area: spacer-v-accent;
+		width: 5px;
+    }
+	
+    .spacer-head
+	{
+        grid-area: spacer-head;
+		height: 5px;
+    }
+
+    .spacer-foot {
+        grid-area: spacer-foot;
+		height: 5%;
+    }
+	
+	.spacer-h-accent {
+        grid-area: spacer-h-accent;
+		height: 5px;
+    }
+	
+	.spacer-f-accent {
+        grid-area: spacer-f-accent;
+		height: 5px;
+		width:100%;
+		bottom:-5%;
+    }

@@ -1,0 +1,29 @@
+﻿/*!
+ * UXFonts version 0.1
+ * Copyright 2018 UPS
+ * Designed and built by UXAMS design and dev team
+ * This CSS file will load custom fonts for use on Android(Hybrid)
+ */
+
+ /*TODO: */
+ 
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/segoeui.ttf");  // Give relative path to your css file.
+}
+
+@font-face {
+  font-family: "Segoe UI Symbol";
+  src: url("../fonts/seguisym.ttf");  // Give relative path to your css file.
+}
+
+@font-face {
+  font-family: "ups-ux-font";
+  src:url("../fonts/ups-ux-font.eot");
+  src:url("../fonts/ups-ux-font.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/ups-ux-font.woff") format("woff"),
+    url("../fonts/ups-ux-font.ttf") format("truetype"),
+    url("../fonts/ups-ux-font.svg#ups-ux-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

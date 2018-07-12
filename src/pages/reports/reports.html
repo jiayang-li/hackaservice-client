@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ReportsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="navbar navbar-fixed-top navbar-default ups-top-navigation">
+    <div class="leftHead">
+        <div class="headerInset">
+            <div class="insetContainer">
+                <a class="navbar-brand" href="#">
+                    <img alt="Ups-Logo" class="img-responsive ups_logo" src="../../assets/imgs/UPS_Logo.png" />
+                </a>
+            </div>
+        </div>
+        <div style="display:inline-block;" class="brandingContainer">
+            <span class="brandingText">STORM</span>
+        </div>
+        <ion-buttons style="display: inline-block;float: right;margin-right: 2px;margin-top: 3px;" id="menuButton" start>
+            <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </div>
+</div>
+
+
+<ion-content padding style="margin-top: 50px;">
+  <h1>Trend Chart</h1>
+  <div *ngIf="lineChartData.length > 0">
+      <div style="display: block;">
+          <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+      </div>
+  </div>
+</ion-content>

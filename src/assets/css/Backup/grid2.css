@@ -1,0 +1,66 @@
+/* Styles go here */
+
+	@media screen and (min-width: 480px) {
+		body {
+			margin: 40px;
+		}
+	}
+
+    .wrapper {
+        display: grid;
+		grid-gap: 0px;
+        grid-template-columns: 120px 1fr 2fr;
+		grid-template-rows: auto;
+        grid-template-areas:
+		"upsshield header  header"
+		"spacer    spacer  spacer"
+        "sidebar   content content"
+        "sidebar   footer  footer";
+    }
+	
+	.box {
+	  /*border-radius: 5px;*/
+	  padding: 10px;
+	  font-size: 150%;
+	}
+
+	.nogrid {
+		padding: 10px;
+	}
+	
+	@supports(display: grid) {
+		.nogrid {
+			display: none;
+		}
+	}
+
+	.upsshield {
+        grid-area: upsshield;
+		display: inline;
+    }
+	
+	img.upsshield {
+		max-width:100%;
+    }
+
+	.sidebar {
+        grid-area: sidebar;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+	
+	.spacer {
+        grid-area: spacer;
+		height: 5px;
+    }
+	

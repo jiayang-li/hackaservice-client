@@ -1,0 +1,35 @@
+/* Standard Theme Prototype by Chris Bonilla - CDS/Mobility */
+/* Theme Styles go here */
+
+	.accent-1,
+	.upsshield,
+	.nogrid	{
+		background-color: #333333;
+		color: #fff;
+	}
+
+	.accent-2,
+	.spacer-v-accent,
+	.spacer-v-tilt {
+		background-color: #666666;
+		color: #fff;
+	}
+	
+	.accent-3,
+	.spacer-h-accent,
+	.spacer-f-accent {
+		background-color: #999999;
+		color: #fff;
+	}
+	
+	.button-menu-highlight {
+		background-color: #666666;
+	}
+	
+	/*
+	.spacer-v,
+	.spacer-h {
+        background-color: #fff;
+        color: #444;
+    }
+	*/
