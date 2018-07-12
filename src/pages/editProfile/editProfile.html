@@ -8,7 +8,7 @@
             </div>
         </div>
         <div style="display:inline-block;" class="brandingContainer">
-            <span class="brandingText">Edit Profile</span>
+            <span class="brandingText">STORM</span>
         </div>
         <ion-buttons style="display: inline-block;float: right;margin-right: 2px;margin-top: 3px;" id="menuButton" start>
             <button ion-button icon-only menuToggle>
@@ -24,28 +24,36 @@
         <ion-col>
             <ion-list inset>
                 <ion-item>
-                    <ion-label><ion-icon name="mail"></ion-icon></ion-label>
-                    <ion-input [(ngModel)]="fName" placeholder="fName" type="fName"></ion-input>
+                    <ion-label><ion-icon name="person"></ion-icon></ion-label>
+                    <ion-input [(ngModel)]="fName" placeholder="First Name" type="fName"></ion-input>
                 </ion-item>
                 <ion-item>
-                    <ion-label><ion-icon name="mail"></ion-icon></ion-label>
-                    <ion-input [(ngModel)]="lName" placeholder="lName" type="lNames"></ion-input>
+                    <ion-label><ion-icon name="person"></ion-icon></ion-label>
+                    <ion-input [(ngModel)]="lName" placeholder="Last Name" type="lNames"></ion-input>
                 </ion-item>
                 <ion-item>
                     <ion-label><ion-icon name="mail"></ion-icon></ion-label>
                     <ion-input [(ngModel)]="email" placeholder="email" type="email"></ion-input>
                 </ion-item>
                 <ion-item>
-                    <ion-label><ion-icon name="mail"></ion-icon></ion-label>
-                    <ion-input [(ngModel)]="lang" placeholder="lang" type="lang"></ion-input>
-                </ion-item>
-                <ion-item>
                     <ion-label>Role</ion-label>
                     <ion-select [(ngModel)]="role">
-                        <ion-option value="god">God</ion-option>
-                        <ion-option value="admin">Admin</ion-option>
-                        <ion-option value="csr">CSR</ion-option>
                         <ion-option value="user">User</ion-option>
+                        <ion-option value="csr">CSR</ion-option>
+                        <ion-option value="admin">Admin</ion-option>
+                        <ion-option value="god">God</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Language</ion-label>
+                    <ion-select [(ngModel)]="lang">
+                        <ion-option value ="en">English</ion-option>                        
+                        <ion-option value ="es">Spanish</ion-option>
+                        <ion-option value ="ar">Arabic</ion-option>
+                        <ion-option value ="fr">French</ion-option>
+                        <ion-option value ="jp">Japanese</ion-option>
+                        <ion-option value ="de">German</ion-option>
+                        <ion-option value ="it">Italian</ion-option>
                     </ion-select>
                 </ion-item>
             </ion-list>

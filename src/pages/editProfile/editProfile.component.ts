@@ -35,8 +35,8 @@ export class EditProfilePage {
         fName: this.fName,
         lName: this.lName,
         email: this.email,
-        lang: this.lang,
-        role: this.role
+        role: this.role,
+        lang: this.lang
       };
       this.userService.updateProfile(details).then((data) => { 
         console.log('after: ' + data);

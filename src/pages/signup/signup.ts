@@ -10,6 +10,8 @@ import { Loading } from 'ionic-angular/components/loading/loading';
 })
 export class SignupPage {
   loading: Loading;
+  fName: string;
+  lName: string;
   role: string;
   lang: string;
   email: string;
@@ -25,6 +27,8 @@ export class SignupPage {
  
     let details = {
         email: this.email,
+        fName: this.fName,
+        lName: this.lName,
         password: this.password,
         role: this.role,
         lang: this.lang

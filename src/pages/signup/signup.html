@@ -18,7 +18,16 @@
     <ion-row class="account-form">
         <ion-col>
             <ion-list inset>
- 
+                
+                <ion-item>
+                    <ion-label><ion-icon name="person"></ion-icon></ion-label>
+                    <ion-input [(ngModel)]="fName" placeholder="First Name" type="fName"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label><ion-icon name="person"></ion-icon></ion-label>
+                    <ion-input [(ngModel)]="lName" placeholder="Last Name" type="lNames"></ion-input>
+                </ion-item>
+
                 <ion-item>
                     <ion-label><ion-icon name="mail"></ion-icon></ion-label>
                     <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
