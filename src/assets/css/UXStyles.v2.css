@@ -177,15 +177,38 @@ pre {
     font-size: 13px;
 }
 
+.button-md:hover:not(.disable-hover) {
+    background-color: #222222 !important;
+}
+
+.button-md {
+    background-color: #222222 !important;
+    border-radius: 0 !important;
+    height: 45px !important;
+}
+
+ion-content {
+    height: 85vh !important;
+    overflow-y: auto;
+}
+
 .insetContainer {
     transform: skew(5deg);
+}
+
+.content.content-md {
+    margin-top: 20px;
+}
+
+.ios signup-page .continue-button, .md signup-page .continue-button {
+    background-color: #488aff !important;
 }
 
 .brandingText {
     display: block;
     color: #FFF;
     margin-top: -32px;
-    margin-left: 56px;
+    margin-left: 70px !important;
 }
 
 .active .disabled {

@@ -9,12 +9,14 @@ import { EditProfilePage } from '../pages/editProfile/editProfile.component';
 import { ThreatsPage } from '../pages/threats/threats';
 import { Storage } from '@ionic/storage';
 import { GodPage } from '../pages/god/god';
+import { ReportsPage } from '../pages/reports/reports';
 @Component({
   templateUrl: `app.html`
 })
 export class MyApp {
   @ViewChild(Nav) nav: NavController;  
   rootPage = LoginPage;
+  amIAGod: boolean = false;
   public mainmenu : any = [];
   constructor(public storage : Storage, platform: Platform, statusBar: StatusBar) {
     platform.ready().then(() => {
@@ -22,44 +24,33 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       // this.mainmenu2 = this.nav._children[0];
       statusBar.styleDefault();
-      this.mainmenu = [ 
-        { 
-          tabTitle : 'Home',
-          Component: HomePage,
-          link: 'goToHome()'
-        }, 
-        { 
-          tabTitle : 'God',
-          Component: GodPage,
-          link: 'goToGodPage()'
-        }, 
-        { 
-          tabTitle : 'Edit Profile',
-          Component: EditProfilePage,
-          link: 'goToEditProfile()'
-        },
-        {
-          tabTitle : 'Threats',
-          Component: ThreatsPage,
-          link: 'goToThreats()'
-        }
-      ]
+      this.storage.get('role').then((data) => { 
+        console.log('beep: ' + data);
+        if (data === 'god')
+          this.amIAGod = true;
+      })
     });
 
   }
   openPage(m) { 
     this.nav.setRoot(m.Component);
   }
-  goToHome(Page) { 
+  goToReports() {
+     this.nav.setRoot(ReportsPage);
+  }
+  goToHome() { 
     this.nav.setRoot(HomePage);
   }
-  goToLogin(Page) { 
+  goToEditProfile() { 
+    this.nav.setRoot(EditProfilePage);
+  }
+  goToLogin() { 
     this.nav.setRoot(LoginPage);
   }
-  goToThreats(Page) { 
+  goToThreats() { 
     this.nav.setRoot(ThreatsPage);
   }
-  goToGodPage(Page) { 
+  goToGodPage() { 
     this.nav.setRoot(GodPage);
   }
   logout() { 

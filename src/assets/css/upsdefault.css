@@ -303,11 +303,11 @@
 
 /* start content scroll */
 .header {
-    background-color: #330000;
+    background-color: #222222;
     border-bottom:1px solid #FFF;
     width: 100%;
     color: #FFF;
-    height: 40px;
+    height: 70px;
     padding: 10px 0px 10px 25px;
     margin-top: 2px;
     z-index: 2;

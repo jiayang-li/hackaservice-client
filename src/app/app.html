@@ -1,11 +1,23 @@
 <ion-menu [content]="nav" side="right">
     <ion-content padding>
-        <button menuClose ion-item *ngFor="let m of mainmenu" (click)="openPage(m)">
-                {{m.tabTitle}}
+        <button menuClose ion-item (click)="goToHome()">
+        Home
+        </button>
+        <button menuClose ion-item (click)="goToReports()">
+        Reports
+        </button>
+        <button menuClose ion-item (click)="goToEditProfile()">
+        My Profile
+        </button>
+        <button menuClose ion-item (click)="goToThreats()">
+        Threats
+        </button>
+        <button menuClose ion-item *ngIf="amIAGod" (click)="goToGodPage()">
+        God
         </button>
         <button menuClose ion-item (click)="logout()">
-            Logout
-          </button>
+        Logout
+        </button>
     </ion-content>
 </ion-menu>
 <ion-nav [root]="rootPage" #nav main name="app"></ion-nav>

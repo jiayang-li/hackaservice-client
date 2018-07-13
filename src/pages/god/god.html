@@ -1,37 +1,84 @@
 <div class="navbar navbar-fixed-top navbar-default ups-top-navigation">
-    <div class="leftHead">
-        <div class="headerInset">
-            <div class="insetContainer">
-                <a class="navbar-brand" href="#">
-                    <img alt="Ups-Logo" class="img-responsive ups_logo" src="../../assets/imgs/UPS_Logo.png" />
-                </a>
+        <div class="leftHead">
+            <div class="headerInset">
+                <div class="insetContainer">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Ups-Logo" class="img-responsive ups_logo" src="../../assets/imgs/UPS_Logo.png" />
+                    </a>
+                </div>
             </div>
+                <span class="brandingContainer">
+                    <span class="brandingText">G0D P4G3</span>
+                </span>
+            <ion-buttons style="display: inline-block; float: right; margin-right: 2px; margin-top: -34px;" id="menuButton" start>
+                <button ion-button icon-only menuToggle style="background:black!important">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+            </ion-buttons>
         </div>
-            <span class="brandingContainer">
-                <span class="brandingText">G0D P4G3</span>
-            </span>
-        <ion-buttons style="display: inline-block; float: right; margin-right: 2px; margin-top: -34px;" id="menuButton" start>
-            <button ion-button icon-only menuToggle style="background:black!important">
-                <ion-icon name="menu"></ion-icon>
-            </button>
-        </ion-buttons>
     </div>
-</div>
 
 <ion-content padding style="margin-top: 92px;">
     <ion-row class="account-form">
         <ion-row>
-            <ion-list radio-group id="userList" (ionChange)="addUser($event)" (ionChange)="deleteUser($event)">
+            <ion-list radio-group [(ngModel)]="radioLister" id="userList">
                 <ion-list-header>Users</ion-list-header>
                 <ion-item *ngFor="let user of users; let i = index">
                     <ion-label>{{ user.email }}</ion-label>
-                    <ion-radio value = "{{ i + 1 }}"></ion-radio>
+                    <ion-radio value="{{ user.email }}"></ion-radio>
                 </ion-item>
             </ion-list>
         </ion-row>
         <ion-row>
-            <button ion-button color="secondary" (click)="addUser()">ADD</button>
             <button ion-button color="danger" (click)="deleteUser()">DELETE</button>
         </ion-row>
+    </ion-row>
+    <ion-row>
+        <ion-list inset>
+            <ion-item>
+                <ion-label><ion-icon name="person"></ion-icon></ion-label>
+                <ion-input [(ngModel)]="fName" placeholder="First Name" type="fName"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label><ion-icon name="person"></ion-icon></ion-label>
+                <ion-input [(ngModel)]="lName" placeholder="Last Name" type="lNames"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+                <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label><ion-icon name="lock"></ion-icon></ion-label>
+                <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Role</ion-label>
+                <ion-select [(ngModel)]="role">
+                    <ion-option value="user">user</ion-option>
+                    <ion-option value="csr">csr</ion-option>
+                    <ion-option value="admin">admin</ion-option>
+                    <ion-option value="god">god</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Language</ion-label>
+                <ion-select [(ngModel)]="lang">
+                    <ion-option value ="en">English</ion-option>                        
+                    <ion-option value ="es">Spanish</ion-option>
+                    <ion-option value ="ar">Arabic</ion-option>
+                    <ion-option value ="fr">French</ion-option>
+                    <ion-option value ="jp">Japanese</ion-option>
+                    <ion-option value ="de">German</ion-option>
+                    <ion-option value ="it">Italian</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <button ion-button color="secondary" (click)="addUser()">ADD</button><br/><br/><br/><br/>
+            </ion-item>
+        </ion-list>
     </ion-row>
 </ion-content>

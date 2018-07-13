@@ -19,6 +19,8 @@ import { ViewResponse } from './viewResponse/viewResponse.component';
 import { User } from '../providers/user/user';
 import { ResponseService } from '../providers/responses/responses';
 import { ThreatsPage } from '../pages/threats/threats';
+import { ReportsPage } from '../pages/reports/reports';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     MyApp,
@@ -30,13 +32,14 @@ import { ThreatsPage } from '../pages/threats/threats';
     GetTweetsByUser,
     ViewResponse,
     ThreatsPage,
-    GodPage
+    GodPage,
+    ReportsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp), 
     IonicStorageModule.forRoot(),
     BrowserModule, HttpModule,
-    ChartsModule
+    ChartsModule, HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,7 +52,8 @@ import { ThreatsPage } from '../pages/threats/threats';
     claimTweetForm,
     GetTweetsByUser,
     GodPage,
-    ViewResponse
+    ViewResponse,
+    ReportsPage
   ],
   providers: [Storage, Auth, StatusBar, Tweets, User, ResponseService ]
 })
