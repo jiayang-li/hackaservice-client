@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="queue2 noShowOnMobile" style="width:35%;">
-                    <h1>My Responses</h1>
+                    <h1 style="padding-left:12px">My Responses</h1>
                 </div>
             </div>
             <!-- <input #generalQueueTotal type="text" [(ngModel)]="generalQueueTotal2" required />-->
@@ -62,7 +62,7 @@
                                     <small style="display:inline-block;float:left"><a (click)="getTweetsByUser(tweet.user)">{{ tweet.user }}</a></small> 
                                     <small style="display:inline-block;float:right">{{ refineDate(tweet.date) }}</small>
                                     <ion-thumbnail item-start>
-                                        <img src="{{tweet.avatar}}" />
+                                        <img src="{{tweet.avatar}}" style="border-radius: 40px;"/>
                                     </ion-thumbnail>
                                 </ion-item>
                                 <ion-item-options>
@@ -83,7 +83,7 @@
                                     <small style="display:inline-block;float:left"><a (click)="getTweetsByUser(tweet.user)">{{ tweet.user }}</a></small> 
                                     <small style="display:inline-block;float:right">{{ tweet.date }}</small>
                                     <ion-thumbnail item-start>
-                                        <img src="{{tweet.avatar}}" />
+                                        <img src="{{tweet.avatar}}" style="border-radius: 40px;" />
                                     </ion-thumbnail>
                                 </ion-item>
                                 <ion-item-options>
@@ -95,7 +95,6 @@
                                 <ion-item-divider></ion-item-divider>
                             </ion-item-sliding>
                         </ion-list>
-                    <button ion-button (click)="goToReports()">Go To Reports</button>
                     </div>
                     <div class="queue2 noShowOnMobile">
                         <ion-list>
