@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { GodPage } from '../pages/god/god';
 import { EditProfilePage } from '../pages/editProfile/editProfile.component';
 import { Auth } from '../providers/auth/auth';
 import { IonicStorageModule } from '@ionic/storage';
@@ -26,7 +27,8 @@ import { ResponseService } from '../providers/responses/responses';
     EditProfilePage,
     claimTweetForm,
     GetTweetsByUser,
-    ViewResponse
+    ViewResponse,
+    GodPage
   ],
   imports: [
     IonicModule.forRoot(MyApp), 
@@ -43,6 +45,7 @@ import { ResponseService } from '../providers/responses/responses';
     EditProfilePage,
     claimTweetForm,
     GetTweetsByUser,
+    GodPage,
     ViewResponse
   ],
   providers: [Storage, Auth, StatusBar, Tweets, User, ResponseService ]

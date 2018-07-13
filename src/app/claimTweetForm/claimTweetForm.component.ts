@@ -62,12 +62,11 @@ export class claimTweetForm {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Authorization', this.authService.token);
-        let tweetObj = { user: this.tweetUser, text: this.text, in_reply_to: this.in_reply_to };
+        let tweetObj = { user: this.tweetUser, text: this.text + ' https://twitter.com/messages/compose?recipient_id=' + 469590520, in_reply_to: this.in_reply_to };
         // uncomment this to actually post tweet
         this.http.post('https://hackaservice.herokuapp.com/api/tweets/postTweet/', 
         JSON.stringify(tweetObj), { headers: headers })
             .subscribe(res => { this.claimedSuccessfully(res); });
-        this.claimedSuccessfully(tweetObj); 
         this.viewCtrl.dismiss();
     }
     claimedSuccessfully(res) {

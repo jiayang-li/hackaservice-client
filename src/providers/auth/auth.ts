@@ -24,14 +24,14 @@ export class Auth {
     });
   }
   createAccount(details){
+    console.log('the detz: ' + JSON.stringify(details));
     return new Promise((resolve, reject) => {
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
       this.http.post(this.url + 'api/auth/register', JSON.stringify(details), {headers: headers})
         .subscribe(res => {
           let data = res.json();
-          this.token = data.token;
-          this.storage.set('token', data.token);
+          console.log('Sacramento: ' + JSON.stringify(data));
           resolve(data);
         }, (err) => {
           reject(err);
@@ -53,7 +53,6 @@ export class Auth {
           this.storage.set('role', credentials.role);     
           this.storage.set('lang', data.user.lang);       
           resolve(data);
-          resolve(res.json());
         }, (err) => {
           reject(err);
         });

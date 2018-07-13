@@ -27,6 +27,7 @@ export class HomePage {
   whichPage: String = 'Good';
   generalQueueTotal2: Number = 5;
   public myResponses: any;
+  halo: Number;
   constructor(public storage: Storage, public navCtrl: NavController, 
   public tweetService: Tweets, public modalCtrl: ModalController, 
   public authService: Auth, public loadingCtrl: LoadingController,
@@ -34,6 +35,8 @@ export class HomePage {
     this.storage.get('username').then((value) => {
       this.username = value;
       this.responseService.getMyResponses(this.username).then((datax) => {
+        this.halo = Object.keys(datax).length;
+        console.log('wada bing: ' + Object.keys(datax).length);
         this.myResponses = datax;
       }, (err) => { throw err; });
     });

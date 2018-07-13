@@ -11,7 +11,7 @@
                 <span class="brandingText">STORM</span>
             </span>
         <ion-buttons style="display: inline-block; float: right; margin-right: 2px; margin-top: -34px;" id="menuButton" start>
-            <button ion-button icon-only menuToggle>
+            <button ion-button icon-only menuToggle style="background:black!important">
                 <ion-icon name="menu"></ion-icon>
             </button>
         </ion-buttons>
@@ -105,6 +105,7 @@
                                         <small>{{ res.createdAt }}</small>
                                 </ion-item>
                             </div>
+                            <span *ngIf="halo == 0">You have not responded yet!</span>
                         </ion-list>
                     </div>
                 </div>
