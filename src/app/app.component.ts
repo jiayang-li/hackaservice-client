@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { EditProfilePage } from '../pages/editProfile/editProfile.component';
 import { ThreatsPage } from '../pages/threats/threats';
 import { Storage } from '@ionic/storage';
+import { GodPage } from '../pages/god/god';
 @Component({
   templateUrl: `app.html`
 })
@@ -26,6 +27,11 @@ export class MyApp {
           tabTitle : 'Home',
           Component: HomePage,
           link: 'goToHome()'
+        }, 
+        { 
+          tabTitle : 'God',
+          Component: GodPage,
+          link: 'goToGodPage()'
         }, 
         { 
           tabTitle : 'Edit Profile',
@@ -53,10 +59,14 @@ export class MyApp {
   goToThreats(Page) { 
     this.nav.setRoot(ThreatsPage);
   }
+  goToGodPage(Page) { 
+    this.nav.setRoot(GodPage);
+  }
   logout() { 
     // sets username and token to null
     this.storage.set("username", "");
     this.storage.set("token", "");
     this.nav.setRoot(LoginPage); // takes user to LoginPage
   }
+
 }

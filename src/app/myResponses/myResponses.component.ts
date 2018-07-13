@@ -22,7 +22,9 @@ export class MyResponses {
       this.storage.get('username').then((value) => {
         this.username = value;
         this.responseService.getMyResponses(this.username).then((datax) => {
-          this.responses = datax;
+            if (datax) { 
+                this.responses = datax;
+            } 
         }, (err) => { throw err; });
       });
     }

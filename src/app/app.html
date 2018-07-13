@@ -1,4 +1,4 @@
-<ion-menu [content]="nav">
+<ion-menu [content]="nav" side="right">
     <ion-content padding>
         <button menuClose ion-item *ngFor="let m of mainmenu" (click)="openPage(m)">
                 {{m.tabTitle}}

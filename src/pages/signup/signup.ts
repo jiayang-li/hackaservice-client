@@ -3,6 +3,7 @@ import { NavController, LoadingController } from 'ionic-angular';
 import { Auth } from '../../providers/auth/auth';
 import { HomePage } from '../home/home';
 import { Loading } from 'ionic-angular/components/loading/loading';
+import { LoginPage } from '../login/login';
  
 @Component({
   selector: 'signup-page',
@@ -27,17 +28,17 @@ export class SignupPage {
  
     let details = {
         email: this.email,
-        fName: this.fName,
-        lName: this.lName,
+        firstName: this.fName,
+        lastName: this.lName,
         password: this.password,
         role: this.role,
         lang: this.lang
     };
-    console.log('stringy: ' + JSON.stringify(details));
+    console.log('stringyz: ' + JSON.stringify(details));
     this.authService.createAccount(details).then((result) => {
       this.loading.dismiss();
-      console.log(result);
-      this.navCtrl.setRoot(HomePage);
+      console.log('bosnia: ' + result);
+      this.navCtrl.setRoot(LoginPage);
     }, (err) => {
         this.loading.dismiss();
     });

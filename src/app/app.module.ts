@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { GodPage } from '../pages/god/god';
 import { EditProfilePage } from '../pages/editProfile/editProfile.component';
 import { Auth } from '../providers/auth/auth';
 import { IonicStorageModule } from '@ionic/storage';
@@ -28,7 +29,11 @@ import { ThreatsPage } from '../pages/threats/threats';
     claimTweetForm,
     GetTweetsByUser,
     ViewResponse,
+<<<<<<< HEAD
     ThreatsPage
+=======
+    GodPage
+>>>>>>> 9ef5687bb08a7ed51da1722574407fb5d9a73ab3
   ],
   imports: [
     IonicModule.forRoot(MyApp), 
@@ -46,6 +51,7 @@ import { ThreatsPage } from '../pages/threats/threats';
     EditProfilePage,
     claimTweetForm,
     GetTweetsByUser,
+    GodPage,
     ViewResponse
   ],
   providers: [Storage, Auth, StatusBar, Tweets, User, ResponseService ]
