@@ -1,66 +1,42 @@
 <div class="navbar navbar-fixed-top navbar-default ups-top-navigation">
-    <div class="leftHead">
-        <div class="headerInset">
-            <div class="insetContainer">
-                <a class="navbar-brand" href="#">
-                    <img alt="Ups-Logo" class="img-responsive ups_logo" src="../../assets/imgs/UPS_Logo.png" />
-                </a>
+        <div class="leftHead">
+            <div class="headerInset">
+                <div class="insetContainer">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Ups-Logo" class="img-responsive ups_logo" src="../../assets/imgs/UPS_Logo.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="brandingContainer">
+                <span class="brandingText">STORM</span>
+            </div>
+            <ion-buttons style="display: inline-block; float: right; margin-right: 2px; margin-top: -34px;" id="menuButton" start>
+                <button ion-button icon-only menuToggle>
+                <ion-icon name="menu"></ion-icon>
+                </button>
+            </ion-buttons>
+        </div>
+    </div>
+    
+    <ion-content style="margin-top:50px">
+        <div class="yeah" style="display:-webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;">
+          <div class="queue1 fullOnMobile" style="width:70%;">
+            <div style="display:inline-block; margin-left: 20px; width:40%">
+                <h1>Threats</h1>
             </div>
         </div>
-        <div class="brandingContainer">
-            <span class="brandingText">STORM</span>
-        </div>
-        <ion-buttons style="display: inline-block; float: right; margin-right: 2px; margin-top: -34px;" id="menuButton" start>
-            <button ion-button icon-only menuToggle>
-            <ion-icon name="menu"></ion-icon>
-            </button>
-        </ion-buttons>
-    </div>
-</div>
-
-<ion-content style="margin-top:50px">
-    <div class="yeah" style="display:-webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;">
-      <div class="queue1 fullOnMobile" style="width:70%;">
-        <div style="display:inline-block;width:40%">
-            <h1>Activity</h1>
-        </div>
-        <div style="display:inline-block;width:30%;float:right;text-align: right;padding-right: 28px;">
-          <ion-select #generalQueueTotal [(ngModel)]="generalQueueTotal2" (ionChange)="changeGeneralQueue(generalQueueTotal.value)" style="background:#222;color:#FFF;max-width:100%;">
-              <ion-option value="5">5</ion-option>
-              <ion-option value="10">10</ion-option>
-              <ion-option value="15">15</ion-option>
-              <ion-option value="25">25</ion-option>
-              <ion-option value="50">50</ion-option>
-              <ion-option value="100">100</ion-option>
-          </ion-select>
       </div>
-    </div>
-    <div class="queue2 noShowOnMobile" style="width:35%;">
-      <h1>My Responses</h1>
-    </div>
-  </div>
-  <hr/>
-  <div id="queueContainer">
-    <div class="queue1">
-        <ion-list>
-            <ion-item-sliding #slidingItem *ngFor="let tweet of threatTweets">
-                <ion-item text-wrap>
-                    <p>{{ tweet.text }}</p>
-                    <small style="display:inline-block;float:left"><a (click)="getTweetsByUser(tweet.user)">{{ tweet.user }}</a></small> 
-                    <small style="display:inline-block;float:right">{{ refineDate(tweet.date) }}</small>
-                    <ion-thumbnail item-start>
-                        <img src="{{tweet.avatar}}" />
-                    </ion-thumbnail>
-                </ion-item>
-                <ion-item-options>
-                    <button ion-button color="primary" (click)="claimTweet(slidingItem, tweet, username)">
-                        <ion-icon name="check"></ion-icon>
-                        Claim
-                    </button>
-                </ion-item-options>
-                <ion-item-divider></ion-item-divider>
-            </ion-item-sliding>
-        </ion-list>
-    </div>
-    </div>
-</ion-content>
+      <hr/>
+      <div id="queueContainer">
+        <div class="queue1">
+            <ion-list>
+                <ion-item-sliding #slidingItem *ngFor="let tweet of threatTweets">
+                    <ion-item text-wrap>
+                        <p>{{ tweet.text }}</p>
+                    </ion-item>
+                    <ion-item-divider></ion-item-divider>
+                </ion-item-sliding>
+            </ion-list>
+        </div>
+        </div>
+    </ion-content>

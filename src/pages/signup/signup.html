@@ -1,18 +1,22 @@
 <div class="navbar navbar-fixed-top navbar-default ups-top-navigation">
         <div class="leftHead">
-          <div class="headerInset">
-            <div class="insetContainer">
-              
-            </div>
-          </div>
-            <span class="brandingContainer">
-                    <a class="navbar-brand" href="index.html" style="margin-left:10px; display:inline-block;">
-                        <ion-icon name="md-arrow-back"></ion-icon>                
+            <div class="headerInset">
+                <div class="insetContainer">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Ups-Logo" class="img-responsive ups_logo" src="../../assets/imgs/UPS_Logo.png" />
                     </a>
-            <span class="brandingText" style="margin-left:45px !important">STORM</span>
-          </span>
+                </div>
+            </div>
+                <span class="brandingContainer">
+                    <span class="brandingText">STORM</span>
+                </span>
+            <ion-buttons style="display: inline-block; float: right; margin-right: 2px; margin-top: -34px;" id="menuButton" start>
+                <button ion-button icon-only menuToggle style="background:black!important">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+            </ion-buttons>
         </div>
-      </div>
+    </div>
     
     <ion-content style="margin-top:50px">
  
@@ -64,7 +68,7 @@
  
             </ion-list>
  
-            <button ion-button (click)="register()" class="continue-button">Register</button>
+            <button ion-button (click)="register()">Register</button>
  
         </ion-col>
     </ion-row>

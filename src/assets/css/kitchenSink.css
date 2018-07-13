@@ -142,3 +142,14 @@
 ion-content { 
     margin-top: 25px;
 }
+
+ion-segment-button.segment-button { 
+    background: #EAEAEB;
+}
+
+.segment-button .segment-activated { 
+    background: #FFF !important;
+}
+ion-select { 
+    padding: 8px !important;
+}

@@ -32,7 +32,7 @@ export class ThreatsPage {
    public data : any = [];
  
    getData() { return this.http.get(this.apiUrl).map((res: Response) => res.json()) }
-   getResearch() { this.getData().subscribe(data => { this.data = data; }) }
+   getResearch() { this.getData().subscribe(data => { this.threatTweets = data; }) }
 
   refineDate(timestamp) { 
     timestamp = new Date(timestamp);
@@ -40,29 +40,6 @@ export class ThreatsPage {
     return date;
   }
 
-  getTweetsByUser(user) { 
-    let prompt = this.modalCtrl.create(GetTweetsByUser, { user : user } );
-    prompt.present();
-  }
-
-  changeGeneralQueue(value: Number): void {
-    this.generalQueueTotal2 = value;
-  }
-
-  unslideItem(slidingItem: ItemSliding) { 
-    slidingItem.close();
-  }
-
-  claimTweet(slidingItem, tweet, user) {
-    this.unslideItem(slidingItem);
-    let prompt = this.modalCtrl.create(claimTweetForm, { tweet: tweet, user: user });
-    prompt.onDidDismiss((data) => {
-      this.responseService.getMyResponses(this.username).then((datax) => {
-        this.myResponses = datax;
-      }, (err) => { throw err; });
-    });
-    prompt.present();
-  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ThreatsPage');
