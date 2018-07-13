@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, ItemSliding } from 'ionic-angular';
+import { NavController, NavParams, ModalController, ItemSliding } from 'ionic-angular';
 import { Http, Response } from '@angular/http';
 import { claimTweetForm } from '../../app/claimTweetForm/claimTweetForm.component';
 import { Tweets } from '../../providers/tweets/tweets';
@@ -69,5 +69,4 @@ export class ThreatsPage {
     console.log(this.getData());
     console.log(this.getResearch());
   }
-
 }

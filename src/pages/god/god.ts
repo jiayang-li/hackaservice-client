@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-/**
- * Generated class for the GodPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { ResponseService } from '../../providers/responses/responses';
+import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'page-god',
@@ -14,12 +10,16 @@ import { Storage } from '@ionic/storage';
 })
 export class GodPage {
   areYouAGodVariable: boolean = false;
-  constructor(public storage : Storage, public navCtrl: NavController, public navParams: NavParams) {
+  users: any;
+  username: any;
+  public myResponses: any;
+
+  constructor(public http: Http, public storage : Storage, public navCtrl: NavController, 
+    public navParams: NavParams, public responseService: ResponseService) {
     this.areYouAGod();
+    this.getResearch();
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GodPage');
-  }
+  
   areYouAGod() { 
     // so unsafe lol
     this.storage.get('role')
@@ -30,5 +30,25 @@ export class GodPage {
         this.areYouAGodVariable = true;
       }
     })
+  }
+
+  private apiUrlDeleteUser = 'https://hackaservice.herokuapp.com/api/admin/delete';
+  deleteUser(){ 
+    console.log("delete"); 
+  }
+
+  private apiUrlAddUser = 'https://hackaservice.herokuapp.com/api/admin/add';
+  addUser(){ 
+    console.log("add");
+  }
+
+  private apiUrlGetUsers = 'https://hackaservice.herokuapp.com/api/admin';
+  public userData : any = [];
+
+  getUsersData() { return this.http.get(this.apiUrlGetUsers).map((res: Response) => res.json()) }
+  getResearch() { this.getUsersData().subscribe(userData => { this.users = userData; }) }
+  
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad GodPage');
   }
 }

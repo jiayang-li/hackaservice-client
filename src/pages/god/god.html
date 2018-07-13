@@ -19,11 +19,19 @@
 </div>
 
 <ion-content padding style="margin-top: 92px;">
-W3LCOM3 TO G0D P4G3
-<div *ngIf="areYouAGodVariable"> 
-I am a god!
-</div>
-  <div *ngIf="!areYouAGodVariable"> 
-    I am not a god!
-  </div>
+    <ion-row class="account-form">
+        <ion-row>
+            <ion-list radio-group id="userList">
+                <ion-list-header>Users</ion-list-header>
+                <ion-item *ngFor="let i of users">
+                    <ion-label>{{ i.email }}</ion-label>
+                    <ion-radio></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-row>
+        <ion-row>
+            <button ion-button color="secondary" (click)="addUser()">ADD</button>
+            <button ion-button color="danger" (click)="deleteUser()">DELETE</button>
+        </ion-row>
+    </ion-row>
 </ion-content>
