@@ -32,9 +32,13 @@ export class GodPage {
     })
   }
 
+  getUser(value){
+    console.log(value);
+ }
+
   private apiUrlDeleteUser = 'https://hackaservice.herokuapp.com/api/admin/delete';
-  deleteUser(){ 
-    console.log("delete"); 
+  deleteUser(value){ 
+    console.log(value);
   }
 
   private apiUrlAddUser = 'https://hackaservice.herokuapp.com/api/admin/add';

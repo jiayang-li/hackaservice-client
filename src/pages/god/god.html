@@ -21,11 +21,11 @@
 <ion-content padding style="margin-top: 92px;">
     <ion-row class="account-form">
         <ion-row>
-            <ion-list radio-group id="userList">
+            <ion-list radio-group id="userList" (ionChange)="addUser($event)" (ionChange)="deleteUser($event)">
                 <ion-list-header>Users</ion-list-header>
-                <ion-item *ngFor="let i of users">
-                    <ion-label>{{ i.email }}</ion-label>
-                    <ion-radio></ion-radio>
+                <ion-item *ngFor="let user of users; let i = index">
+                    <ion-label>{{ user.email }}</ion-label>
+                    <ion-radio value = "{{ i + 1 }}"></ion-radio>
                 </ion-item>
             </ion-list>
         </ion-row>
