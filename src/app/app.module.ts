@@ -29,11 +29,8 @@ import { ThreatsPage } from '../pages/threats/threats';
     claimTweetForm,
     GetTweetsByUser,
     ViewResponse,
-<<<<<<< HEAD
-    ThreatsPage
-=======
+    ThreatsPage,
     GodPage
->>>>>>> 9ef5687bb08a7ed51da1722574407fb5d9a73ab3
   ],
   imports: [
     IonicModule.forRoot(MyApp), 
