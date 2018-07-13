@@ -17,6 +17,7 @@ import { GetTweetsByUser } from './getTweetsByUser/getTweetsByUser.component';
 import { ViewResponse } from './viewResponse/viewResponse.component';
 import { User } from '../providers/user/user';
 import { ResponseService } from '../providers/responses/responses';
+import { ThreatsPage } from '../pages/threats/threats';
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +27,8 @@ import { ResponseService } from '../providers/responses/responses';
     EditProfilePage,
     claimTweetForm,
     GetTweetsByUser,
-    ViewResponse
+    ViewResponse,
+    ThreatsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp), 
@@ -40,6 +42,7 @@ import { ResponseService } from '../providers/responses/responses';
     HomePage,
     LoginPage,
     SignupPage, 
+    ThreatsPage,
     EditProfilePage,
     claimTweetForm,
     GetTweetsByUser,

@@ -6,6 +6,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { HomePage } from '../pages/home/home';
 import { EditProfilePage } from '../pages/editProfile/editProfile.component';
+import { ThreatsPage } from '../pages/threats/threats';
 import { Storage } from '@ionic/storage';
 @Component({
   templateUrl: `app.html`
@@ -25,21 +26,16 @@ export class MyApp {
           tabTitle : 'Home',
           Component: HomePage,
           link: 'goToHome()'
-        },
-        { 
-          tabTitle : 'About',
-          Component: LoginPage,
-          link: 'goToAbout()'
-        },
-        { 
-          tabTitle : 'Sign Up',
-          Component: SignupPage,
-          link: 'goToContact()'
         }, 
         { 
           tabTitle : 'Edit Profile',
           Component: EditProfilePage,
           link: 'goToEditProfile()'
+        },
+        {
+          tabTitle : 'Threats',
+          Component: ThreatsPage,
+          link: 'goToThreats()'
         }
       ]
     });
@@ -54,11 +50,8 @@ export class MyApp {
   goToLogin(Page) { 
     this.nav.setRoot(LoginPage);
   }
-  goToSignup(Page) { 
-    this.nav.setRoot(SignupPage);
-  }
-  goToEditProfile(Page) { 
-    this.nav.setRoot(EditProfilePage);
+  goToThreats(Page) { 
+    this.nav.setRoot(ThreatsPage);
   }
   logout() { 
     // sets username and token to null
