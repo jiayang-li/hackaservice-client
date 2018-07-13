@@ -177,10 +177,10 @@ export class ReportsPage {
   public barChartOptions: any = {
     responsive: true,
     title: {
-      text: "", 
+      text: "Top 100 Tweets",
       display: true
     },
-    legend: { position: "bottom" },
+    legend: { position: "bottom" }
   };
   public barChartColors: Array<any> = [
     { 

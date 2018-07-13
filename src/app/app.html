@@ -1,21 +1,27 @@
 <ion-menu [content]="nav" side="right">
     <ion-content padding>
         <button menuClose ion-item (click)="goToHome()">
+        <ion-icon name="home"></ion-icon>&nbsp;
         Home
         </button>
         <button menuClose ion-item (click)="goToReports()">
+        <ion-icon name="paper"></ion-icon>&nbsp;
         Reports
         </button>
         <button menuClose ion-item (click)="goToEditProfile()">
+        <ion-icon name="person"></ion-icon>&nbsp;
         My Profile
         </button>
         <button menuClose ion-item (click)="goToThreats()">
+        <ion-icon name="warning"></ion-icon>&nbsp;
         Threats
         </button>
         <button menuClose ion-item *ngIf="amIAGod" (click)="goToGodPage()">
+        <ion-icon name="logo-bitcoin"></ion-icon>&nbsp;
         God
         </button>
         <button menuClose ion-item (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>&nbsp;
         Logout
         </button>
     </ion-content>

@@ -18,9 +18,10 @@
     </div>
 </div>
 <ion-content style="margin-top:50px">
- 
-    <ion-row class="account-form">
+    <ion-row class="account-form" style="max-width:500px;margin:0 auto;">
         <ion-col>
+    <h1>Update Profile</h1>
+<br/>            
             <ion-list inset>
                 <ion-item>
                     <ion-label><ion-icon name="person"></ion-icon></ion-label>
@@ -57,7 +58,7 @@
                 </ion-item>
             </ion-list>
  
-            <button ion-button (click)="updateProfile()" class="continue-button">Update</button>
+            <button ion-button (click)="updateProfile()" class="continue-button" style="width:100%;">Update</button>
  
         </ion-col>
     </ion-row>

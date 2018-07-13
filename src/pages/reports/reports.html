@@ -18,19 +18,25 @@
     </div>
 </div>
 
-<ion-content padding>
-    <div style="display:block" *ngIf="lineChartData.length > 0">
-        <canvas baseChart width="40vw" height="30vh" [colors]="lineChartColors" [datasets]="lineChartData" [labels]="lineChartLabels"
-        [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="lineChartHovered($event)"
-        (chartClick)="lineChartClicked($event)">
-        </canvas>
-    </div>
-    <br/><hr/><br/>
-    <div style="display:block" *ngIf="barChartData.length > 0">
-        <canvas baseChart width="40vw" height="30vh" [colors]="barChartColors" [datasets]="barChartData" [labels]="barChartLabels"
-            [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="barChartHovered($event)"
-            (chartClick)="barChartClicked($event)">
-        </canvas>
+<ion-content padding style="margin-top: 50px">
+    <h1>Reports Page</h1>
+    <div class="flex-container">
+        <div class="halfy">
+            <div style="display:block" *ngIf="lineChartData.length > 0">
+                <canvas baseChart width="40vw" height="30vh" [colors]="lineChartColors" [datasets]="lineChartData" [labels]="lineChartLabels"
+                [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="lineChartHovered($event)"
+                (chartClick)="lineChartClicked($event)">
+                </canvas>
+            </div>
+        </div>
+        <div class="halfy">
+            <div style="display:block" *ngIf="barChartData.length > 0">
+                    <canvas baseChart width="40vw" height="30vh" [colors]="barChartColors" [datasets]="barChartData" [labels]="barChartLabels"
+                        [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="barChartHovered($event)"
+                        (chartClick)="barChartClicked($event)">
+                    </canvas>
+            </div>
+        </div>
     </div>
 </ion-content>
     

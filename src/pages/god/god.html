@@ -19,66 +19,64 @@
     </div>
 
 <ion-content padding style="margin-top: 92px;">
-    <ion-row class="account-form">
+    <div style="max-width:500px;margin: 0 auto">
+    <h1>G0D P4G3</h1>
+    <h4>Delete Users</h4>
+        <ion-row class="account-form">
+                <ion-list radio-group [(ngModel)]="radioLister" id="userList">
+                    <ion-item *ngFor="let user of users; let i = index">
+                        <ion-label>{{ user.email }}</ion-label>
+                        <ion-radio value="{{ user.email }}"></ion-radio>
+                    </ion-item>
+                </ion-list>
+                <button ion-button (click)="deleteUser()" style="width:100%">Delete</button>
+        </ion-row>
+    <h4>Add Users</h4>
         <ion-row>
-            <ion-list radio-group [(ngModel)]="radioLister" id="userList">
-                <ion-list-header>Users</ion-list-header>
-                <ion-item *ngFor="let user of users; let i = index">
-                    <ion-label>{{ user.email }}</ion-label>
-                    <ion-radio value="{{ user.email }}"></ion-radio>
+            <ion-list>
+                <ion-item>
+                    <ion-label><ion-icon name="person"></ion-icon></ion-label>
+                    <ion-input [(ngModel)]="fName" placeholder="First Name" type="fName"></ion-input>
                 </ion-item>
+                <ion-item>
+                    <ion-label><ion-icon name="person"></ion-icon></ion-label>
+                    <ion-input [(ngModel)]="lName" placeholder="Last Name" type="lNames"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+                    <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label><ion-icon name="lock"></ion-icon></ion-label>
+                    <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label><ion-icon name="person"></ion-icon>Role</ion-label>
+                    <ion-select [(ngModel)]="role">
+                        <ion-option value="user">user</ion-option>
+                        <ion-option value="csr">csr</ion-option>
+                        <ion-option value="admin">admin</ion-option>
+                        <ion-option value="god">god</ion-option>
+                    </ion-select>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label><ion-icon name="volume-up"></ion-icon>Language</ion-label>
+                    <ion-select [(ngModel)]="lang">
+                        <ion-option value ="en">English</ion-option>                        
+                        <ion-option value ="es">Spanish</ion-option>
+                        <ion-option value ="ar">Arabic</ion-option>
+                        <ion-option value ="fr">French</ion-option>
+                        <ion-option value ="jp">Japanese</ion-option>
+                        <ion-option value ="de">German</ion-option>
+                        <ion-option value ="it">Italian</ion-option>
+                    </ion-select>
+                </ion-item>
+                <button ion-button color="secondary" (click)="addUser()" style="width:100%">ADD</button><br/><br/><br/><br/>
             </ion-list>
         </ion-row>
-        <ion-row>
-            <button ion-button color="danger" (click)="deleteUser()">DELETE</button>
-        </ion-row>
-    </ion-row>
-    <ion-row>
-        <ion-list inset>
-            <ion-item>
-                <ion-label><ion-icon name="person"></ion-icon></ion-label>
-                <ion-input [(ngModel)]="fName" placeholder="First Name" type="fName"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label><ion-icon name="person"></ion-icon></ion-label>
-                <ion-input [(ngModel)]="lName" placeholder="Last Name" type="lNames"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label><ion-icon name="mail"></ion-icon></ion-label>
-                <ion-input [(ngModel)]="email" placeholder="Email" type="email"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label><ion-icon name="lock"></ion-icon></ion-label>
-                <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label>Role</ion-label>
-                <ion-select [(ngModel)]="role">
-                    <ion-option value="user">user</ion-option>
-                    <ion-option value="csr">csr</ion-option>
-                    <ion-option value="admin">admin</ion-option>
-                    <ion-option value="god">god</ion-option>
-                </ion-select>
-            </ion-item>
-
-            <ion-item>
-                <ion-label>Language</ion-label>
-                <ion-select [(ngModel)]="lang">
-                    <ion-option value ="en">English</ion-option>                        
-                    <ion-option value ="es">Spanish</ion-option>
-                    <ion-option value ="ar">Arabic</ion-option>
-                    <ion-option value ="fr">French</ion-option>
-                    <ion-option value ="jp">Japanese</ion-option>
-                    <ion-option value ="de">German</ion-option>
-                    <ion-option value ="it">Italian</ion-option>
-                </ion-select>
-            </ion-item>
-            <ion-item>
-                <button ion-button color="secondary" (click)="addUser()">ADD</button><br/><br/><br/><br/>
-            </ion-item>
-        </ion-list>
-    </ion-row>
+    </div>
 </ion-content>
