@@ -16,6 +16,8 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { claimTweetForm } from './claimTweetForm/claimTweetForm.component';
 import { GetTweetsByUser } from './getTweetsByUser/getTweetsByUser.component';
 import { ViewResponse } from './viewResponse/viewResponse.component';
+import { MyResponses } from './myResponses/myResponses.component';
+
 import { User } from '../providers/user/user';
 import { ResponseService } from '../providers/responses/responses';
 import { ThreatsPage } from '../pages/threats/threats';
@@ -31,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     claimTweetForm,
     GetTweetsByUser,
     ViewResponse,
+    MyResponses,
     ThreatsPage,
     GodPage,
     ReportsPage
@@ -53,8 +56,8 @@ import { HttpClientModule } from '@angular/common/http';
     GetTweetsByUser,
     GodPage,
     ViewResponse,
-    ReportsPage
+    ReportsPage,MyResponses
   ],
-  providers: [Storage, Auth, StatusBar, Tweets, User, ResponseService ]
+  providers: [Auth, StatusBar, Tweets, User, ResponseService ]
 })
 export class AppModule {}

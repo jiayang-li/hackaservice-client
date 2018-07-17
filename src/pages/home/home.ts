@@ -25,7 +25,7 @@ export class HomePage {
   badTweets: any;
   username: any;
   whichPage: String = 'Good';
-  generalQueueTotal2: Number = 5;
+  generalQueueTotal2: Number = 15;
   public myResponses: any;
   halo: Number;
   constructor(public storage: Storage, public navCtrl: NavController, 

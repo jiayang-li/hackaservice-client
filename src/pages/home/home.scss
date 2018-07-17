@@ -14,17 +14,30 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
+ion-content { 
+    height: 100%;
+}
 @media (min-width: 800px) {
-    .queue1 { 
-        width: 65% !important;
+    #leftHolder { 
+        width: 75% !important;
     }
-    .queue2 { 
-        width: 35% !important;
+    #rightHolder { 
+        width: 25% !important;
     }
 }
+#rightHolder .item-md { 
+    padding-left: 0px;
+}
+#rightHolder .list-md .item-block .item-inner {
+    padding-left: 10px;
+}
 
-.queue1 { 
+.rightColor { background: #222; color: #FFF; }
+.rightColor h1 { color: #FFF; }
+#leftHolder, #rightHolder { display: inline-block; }
+#rightHolder { float: right; }
+
+#leftHolder { 
    width:100%;
 }
 
