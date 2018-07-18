@@ -10,6 +10,7 @@ import { ThreatsPage } from '../pages/threats/threats';
 import { Storage } from '@ionic/storage';
 import { GodPage } from '../pages/god/god';
 import { ReportsPage } from '../pages/reports/reports';
+import { CompetitionPage } from '../pages/competition/competition';
 @Component({
   templateUrl: `app.html`
 })
@@ -52,6 +53,9 @@ export class MyApp {
   }
   goToGodPage() { 
     this.nav.setRoot(GodPage);
+  }
+  goToCompetition() { 
+    this.nav.setRoot(CompetitionPage);
   }
   logout() { 
     // sets username and token to null

@@ -18,8 +18,34 @@
     </div>
 </div>
 <ion-content id="queueContainer">
-<div id="leftHolder">
-    <ion-segment [(ngModel)]="whichPage" color="primary" style="position: relative;top: 35px;z-index: 99999999;">
+<div id="rightHolder" class="rightColor" style="height:100%;position:fixed;top:35px;left:0px;">
+        <div class="queue2 noShowOnMobile rightColor">
+            <h1 style="width:100%;text-align:center">Welcome back, {{ username }}!</h1>
+            <div>
+                <ion-select #generalQueueTotal [(ngModel)]="generalQueueTotal2" (ionChange)="changeGeneralQueue(generalQueueTotal.value)"
+                style="background:#222;color:#FFF;max-width:100%;">
+                    <ion-option value="5">5</ion-option>
+                    <ion-option value="10">10</ion-option>
+                    <ion-option value="15">15</ion-option>
+                    <ion-option value="25">25</ion-option>
+                    <ion-option value="50">50</ion-option>
+                    <ion-option value="100">100</ion-option>
+                </ion-select>
+            </div>
+            <h1 style="width:100%;text-align:center">My Responses</h1>
+            <ion-list class="rightColor">
+                <div *ngFor="let res of myResponses; let i = index" class="rightColor">
+                    <ion-item *ngIf="i<5+zeep" class="rightColor">
+                            <a (click)="getTweetsByUser(res.user)">{{res.response}}</a>
+                            <small>{{ res.createdAt }}</small>
+                    </ion-item>
+                </div>
+                <span *ngIf="halo == 0">You have not responded yet!</span>
+            </ion-list>
+        </div>
+    </div>
+<div id="leftHolder" style="float:right">
+    <ion-segment [(ngModel)]="whichPage" color="primary" style="background: white;position: relative;z-index: 99999999;">
         <ion-segment-button style="font-size: 11px" value="Good">
             Positive
         </ion-segment-button>
@@ -27,7 +53,7 @@
             Negative
         </ion-segment-button>
     </ion-segment>
-        <div [ngSwitch]="whichPage"style="top: 50px">
+        <div [ngSwitch]="whichPage">
             <ion-list>
                 <!-- <div class="yeah" style="display:-webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;">
                     <div class="queue1 fullOnMobile">
@@ -50,8 +76,7 @@
                 </div> -->
                 <!-- <input #generalQueueTotal type="text" [(ngModel)]="generalQueueTotal2" required />-->
                     <!-- <hr/> -->
-                        <div *ngSwitchCase="'Good'" ngSelected="selected" style="position: relative;
-                        top: 35px;">
+                        <div *ngSwitchCase="'Good'" ngSelected="selected">
                             <ion-list>
                                 <ion-item-sliding #slidingItem *ngFor="let tweet of goodTweets">
                                     <ion-item text-wrap>
@@ -72,8 +97,7 @@
                                 </ion-item-sliding>
                             </ion-list>
                         </div>
-                        <div *ngSwitchCase="'Bad'" style="    position: relative;
-                        top: 35px;">
+                        <div *ngSwitchCase="'Bad'">
                             <ion-list>
                                 <ion-item-sliding #slidingItem  *ngFor="let tweet of badTweets">
                                     <ion-item text-wrap>
@@ -97,18 +121,5 @@
             </ion-list>
         </div>
 </div>
-<div id="rightHolder" class="rightColor" style="height:100%;position:fixed;top:35px;">
-    <div class="queue2 noShowOnMobile rightColor">
-        <h1 style="width:100%;text-align:center">My Responses</h1>
-        <ion-list class="rightColor">
-            <div *ngFor="let res of myResponses; let i = index" class="rightColor">
-                <ion-item *ngIf="i<5+zeep" class="rightColor">
-                        <a (click)="getTweetsByUser(res.user)">{{res.response}}</a>
-                        <small>{{ res.createdAt }}</small>
-                </ion-item>
-            </div>
-            <span *ngIf="halo == 0">You have not responded yet!</span>
-        </ion-list>
-    </div>
-</div>
+
 </ion-content>

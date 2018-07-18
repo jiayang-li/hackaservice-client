@@ -23,6 +23,7 @@ import { ResponseService } from '../providers/responses/responses';
 import { ThreatsPage } from '../pages/threats/threats';
 import { ReportsPage } from '../pages/reports/reports';
 import { HttpClientModule } from '@angular/common/http';
+import { CompetitionPage } from '../pages/competition/competition';
 @NgModule({
   declarations: [
     MyApp,
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     ViewResponse,
     MyResponses,
     ThreatsPage,
+    CompetitionPage,
     GodPage,
     ReportsPage
   ],
@@ -56,7 +58,9 @@ import { HttpClientModule } from '@angular/common/http';
     GetTweetsByUser,
     GodPage,
     ViewResponse,
-    ReportsPage,MyResponses
+    CompetitionPage,
+    ReportsPage,
+    MyResponses
   ],
   providers: [Auth, StatusBar, Tweets, User, ResponseService ]
 })

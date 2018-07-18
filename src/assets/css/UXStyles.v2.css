@@ -188,17 +188,16 @@ pre {
 }
 
 ion-content {
-    height: 85vh !important;
+    height: 96vh !important;
     overflow-y: auto;
+    position:relative;
+    top:47px !important;
 }
 
 .insetContainer {
     transform: skew(5deg);
 }
 
-.content.content-md {
-    margin-top: 20px;
-}
 
 .ios signup-page .continue-button, .md signup-page .continue-button {
     background-color: #488aff !important;
