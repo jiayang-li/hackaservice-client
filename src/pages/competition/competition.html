@@ -1,0 +1,48 @@
+<div class="navbar navbar-fixed-top navbar-default ups-top-navigation">
+  <div class="leftHead">
+      <div class="headerInset">
+          <div class="insetContainer">
+              <a class="navbar-brand" href="#">
+                  <img alt="Ups-Logo" class="img-responsive ups_logo" src="../../assets/imgs/UPS_Logo.png" />
+              </a>
+          </div>
+      </div>
+          <span class="brandingContainer">
+              <span class="brandingText">STORM</span>
+          </span>
+      <ion-buttons style="display: inline-block; float: right; margin-right: 2px; margin-top: -34px;" id="menuButton" start>
+          <button ion-button icon-only menuToggle style="background:black!important">
+              <ion-icon name="menu"></ion-icon>
+          </button>
+      </ion-buttons>
+  </div>
+</div>
+
+<ion-content padding>
+  <div id="queueContainer">
+    <div>
+      <h1>Potential Leads</h1>
+      <h4>Social Posts Voicing Displeasure with @FEDEX</h4>
+      <hr />
+      <ion-list>
+        <ion-item-sliding #slidingItem  *ngFor="let tweet of tweets">
+          <ion-item text-wrap>
+            <p>{{ tweet.text }}</p>
+            <small style="display:inline-block;float:left"><a (click)="getTweetsByUser(tweet.user)">{{ tweet.user }}</a></small> 
+            <small style="display:inline-block;float:right">{{ tweet.date }}</small>
+            <ion-thumbnail item-start>
+                <img src="{{tweet.avatar}}" style="border-radius: 40px;" />
+            </ion-thumbnail>
+          </ion-item>
+          <ion-item-options>
+            <button style="height:100% !important" ion-button color="primary" (click)="claimTweet(slidingItem, tweet, username)">
+              <ion-icon name="check"></ion-icon>
+              Claim
+            </button>
+          </ion-item-options>
+          <ion-item-divider></ion-item-divider>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
