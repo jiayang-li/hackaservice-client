@@ -21,6 +21,9 @@
 <div id="rightHolder" class="rightColor" style="height:100%;position:fixed;top:35px;left:0px;">
         <div class="queue2 noShowOnMobile rightColor">
             <h1 style="width:100%;text-align:center">Welcome back, {{ username }}!</h1>
+            <ion-item>
+                <ion-input [(ngModel)]="handles" placeholder="Handles to Track"></ion-input>
+            </ion-item>
             <button ion-button primary (click)="changeHandle()" style="width:100%">Change Handles!</button>
             <div>
                 <ion-select #generalQueueTotal [(ngModel)]="generalQueueTotal2" (ionChange)="changeGeneralQueue(generalQueueTotal.value)"

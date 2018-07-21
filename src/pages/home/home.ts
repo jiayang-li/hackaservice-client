@@ -23,6 +23,7 @@ export class HomePage {
   loading: any;
   tweets: any;
   goodTweets: any;
+  public handles: string = "test2";
   badTweets: any;
   username: any;
   whichPage: String = 'Good';
@@ -92,14 +93,13 @@ export class HomePage {
     });
   }
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
-  public handles: string = "test";
   changeHandle() {
   return new Promise((resolve, reject) => {
     console.log("changing handlezzzz");
     let headers = new Headers();
     headers.append('Content-Type', 'text/plain');
     headers.append('Authorization', this.authService.token);
-    return this.http.put('https://hackaservice.herokuapp.com/tweets/changeHandles', 
+    return this.http.put('https://hackaservice.herokuapp.com/api/tweets/changeHandles', 
     this.handles, { headers: headers })
       .subscribe(data => {
         console.log(data);
