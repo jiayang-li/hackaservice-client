@@ -4,6 +4,7 @@ import { Tweets } from '../../providers/tweets/tweets';
 import { Auth } from '../../providers/auth/auth';
 import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/storage';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map'
 import { ViewChild } from '@angular/core';
 import { claimTweetForm } from '../../app/claimTweetForm/claimTweetForm.component';
@@ -28,7 +29,7 @@ export class HomePage {
   generalQueueTotal2: Number = 15;
   public myResponses: any;
   halo: Number;
-  constructor(public storage: Storage, public navCtrl: NavController, 
+  constructor(public http: Http, public storage: Storage, public navCtrl: NavController, 
   public tweetService: Tweets, public modalCtrl: ModalController, 
   public authService: Auth, public loadingCtrl: LoadingController,
   public responseService: ResponseService){ 
@@ -91,4 +92,21 @@ export class HomePage {
     });
   }
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
+  public handles: string = "test";
+  changeHandle() {
+  return new Promise((resolve, reject) => {
+    console.log("changing handlezzzz");
+    let headers = new Headers();
+    headers.append('Content-Type', 'text/plain');
+    headers.append('Authorization', this.authService.token);
+    return this.http.put('https://hackaservice.herokuapp.com/tweets/changeHandles', 
+    this.handles, { headers: headers })
+      .subscribe(data => {
+        console.log(data);
+        resolve(data);
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
 }
